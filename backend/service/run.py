@@ -909,13 +909,6 @@ def run(text):
     parser.add_argument('--code_perturbation_method', type=str, default='token')
     args = parser.parse_args()
 
-    API_TOKEN_COUNTER = 0
-
-    if args.openai_model is not None:
-        import openai
-        assert args.openai_key is not None, "Must provide OpenAI API key as --openai_key"
-        openai.api_key = args.openai_key
-
     START_DATE = datetime.datetime.now().strftime('%Y-%m-%d')
     START_TIME = datetime.datetime.now().strftime('%H-%M-%S-%f')
 

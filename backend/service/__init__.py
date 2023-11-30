@@ -1,1 +1,1 @@
-from .punctuation import PunctuationGenerator
+from .detectgpt import PunctuationGenerator

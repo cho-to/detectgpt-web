@@ -22,9 +22,10 @@ class Punctuation:
 
     @router.post('/punc/text')
     async def inference_text(self, input: TextInferenceInput):
+        result = await self.svc.generate(input.text)
+        text = {
+            'perturbations': result['result'][0]['perturbed_original'],
+            'label': result['label']
+        }
 
-        input.text = input.text.replace('\n', '')
-        result = await self.svc.preprocessing(input.text)
-        result = await self.svc.generate(result)
-        print(result)
-        return result
+        return text

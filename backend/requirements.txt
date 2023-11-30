@@ -3,6 +3,8 @@ tqdm
 transformers
 numpy
 pandas
+sentencepiece
+protobuf
 
 fastapi
 fastapi-restful
