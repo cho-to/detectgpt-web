@@ -5,8 +5,6 @@ import numpy as np
 import pandas as pd
 from torch.utils.data import TensorDataset
 import transformers
-from transformers import BertTokenizerFast
-from service.model import CNNLstmBert
 import time
 import functools
 
