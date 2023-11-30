@@ -1,1 +1,1 @@
-# chinese-punctuation-web
+# DetectGPT-web
